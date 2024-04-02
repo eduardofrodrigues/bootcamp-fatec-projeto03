@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Alimentação</title>
+</head>
+
+<body>
+    <main class="mainContainer">
+        <header>
+            <div class="banner">
+                <img src="./assets/home.jpg" alt="banner">
+            </div>
+        </header>
+        <section class="mainDishes">
+            <header>
+                <h4>Prato Principal</h4>
+                <h6>Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</h6>
+            </header>
+            <div class="optionsContainer">
+                <div class="option">
+                    <img src="./assets/bife.jpg" alt="Bife com batatas">
+                    <p class="preco">30</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max=""
+                            name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern=""
+                            inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </div>
+                <div class="option">
+                    <img src="./assets/coxa.jpg" alt="Coxa de frango">
+                    <p class="preco">25</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max=""
+                            name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern=""
+                            inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </div>
+                <div class="option">
+                    <img src="./assets/panela.jpg" alt="Carne de panela">
+                    <p class="preco">22</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max=""
+                            name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern=""
+                            inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sideDishes">
+            <header>
+                <h4>Acompanhamentos</h4>
+                <h6>Porções para uma pessoa.</h6>
+            </header>
+            <div class="optionsContainer">
+                <div class="option">
+                    <img src="./assets/farofa.jpg" alt="Farofa">
+                    <p class="preco">10</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max=""
+                            name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern=""
+                            inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </div>
+                <div class="option">
+                    <img src="./assets/salad.jpg" alt="Salada">
+                    <p class="preco">8</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max=""
+                            name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern=""
+                            inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </div>
+                <div class="option">
+                    <img src="./assets/torresmo.jpg" alt="Torresmo">
+                    <p class="preco">12</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max=""
+                            name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern=""
+                            inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="personalData">
+            <form></form>
+        </section>
+        <section class="shoppingCart">
+
+        </section>
+    </main>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/quantity.js"></script>
+</body>
+
+</html>
