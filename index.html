@@ -37,17 +37,16 @@
         <section class="sectionContainer">
             <p class="sectionTitle">Dados Pessoais</p>
             <div class="formContainer">
-                <form class="formPersonalData">
-                    <input class="input" type="text" placeholder="Nome">
-                    <input class="input" type="tel" placeholder="Telefone" id="phone">
-                    <input class="input" type="email" placeholder="Email" id="email">
+                <form class="formPersonalData" id="formPersonalData">
+                    <input class="input" type="text" placeholder="Nome" id="name" required>
+                    <input class="input" type="tel" placeholder="Telefone" id="phone" required>
+                    <input class="input" type="email" placeholder="Email" id="email" required>
                 </form>
             </div>
         </section>
         <button class="btn" id="btnCalcular">CALCULAR</button>
-        <section class="shoppingCart">
 
-        </section>
+        <section class="shoppingCart" id="shoppingCart"></section>
     </main>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/jquery.mask.min.js"></script>

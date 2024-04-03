@@ -84,12 +84,9 @@ Object.keys(sideDishesProducts).forEach((key) => {
   `
 })
 
-const btnCalular = document.getElementById("btnCalcular");
-btnCalular.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  const buyedProducts = []
+function getProductsAndQuantities() {
   const quantitiesAndProducts = document.getElementsByName("quantity");
+  const buyedProducts = []
 
   quantitiesAndProducts.forEach((quantity) => {
     const quantityInt = parseInt(quantity.value)
@@ -105,6 +102,61 @@ btnCalular.addEventListener("click", (event) => {
     }
   })
 
-  console.log(buyedProducts)
+  return buyedProducts;
+}
+
+function createTable() {
+  const shoppingCart = document.getElementById("shoppingCart");
+  const name = document.getElementById("name").value;
+
+  shoppingCart.innerHTML = `
+    <p class="text">Caro <strong>${name}</strong></p>
+    <p class="text">Seguem os dados do seu pedido:</p>
+    <table class="shopppigTable" id="buyedProductsTable">
+        <tr>
+            <th class="column">Prato</th>
+            <th class="column">Preço Unitário</th>
+            <th class="column">Quantidade</th>
+            <th class="column">Total</th>
+        </tr>
+    </table>
+  `
+}
+
+function insertProductsOnTable(buyedProducts) {
+  const buyedProductsTable = document.getElementById("buyedProductsTable");
+
+  buyedProducts.forEach((product) => {
+    buyedProductsTable.innerHTML += `
+      <tr>
+        <td>${product.name}</td>
+        <td>${formatter.format(product.price)}</td>
+        <td>${product.quantity}</td>
+        <td>${formatter.format(product.quantity * product.price)}</td>
+      </tr>
+    `
+  })
+}
+
+function resetQuantitiesAndForm() {
+  const quantitiesAndProducts = document.getElementsByName("quantity");
+  quantitiesAndProducts.forEach((input) => {
+    input.value = "0"
+  })
+
+  const form = document.getElementById("formPersonalData");
+  form.reset()
+}
+
+const btnCalular = document.getElementById("btnCalcular");
+btnCalular.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const buyedProducts = getProductsAndQuantities();
+
+  if (buyedProducts.length > 0) {
+    createTable();
+    insertProductsOnTable(buyedProducts);
+  }
 
 })

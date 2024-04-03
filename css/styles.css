@@ -135,3 +135,26 @@ body {
     margin: 1.5rem 0;
     cursor: pointer;
 }
+
+.shoppingCart {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid;
+    text-align: left;
+    height: 2rem;
+    padding-left: 1rem;
+}
+
+.shopppigTable {
+    width: 100%;
+    margin-bottom: 7rem;
+}
+
+.column {
+    width: 25%;
+}
