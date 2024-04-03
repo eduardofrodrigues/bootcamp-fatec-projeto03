@@ -125,17 +125,27 @@ function createTable() {
 
 function insertProductsOnTable(buyedProducts) {
   const buyedProductsTable = document.getElementById("buyedProductsTable");
+  let totalShopping = 0;
 
   buyedProducts.forEach((product) => {
+    let totalProduct = product.quantity * product.price;
+    totalShopping += totalProduct;
+
     buyedProductsTable.innerHTML += `
       <tr>
         <td>${product.name}</td>
         <td>${formatter.format(product.price)}</td>
         <td>${product.quantity}</td>
-        <td>${formatter.format(product.quantity * product.price)}</td>
+        <td>${formatter.format(totalProduct)}</td>
       </tr>
     `
   })
+
+  const shoppingCart = document.getElementById("shoppingCart");
+  shoppingCart.innerHTML += `
+    <p class="totalPrice">Preço Final: ${formatter.format(totalShopping)}</p>
+  `
+
 }
 
 function resetQuantitiesAndForm() {
