@@ -144,8 +144,8 @@ function insertProductsOnTable(buyedProducts) {
   const shoppingCart = document.getElementById("shoppingCart");
   shoppingCart.innerHTML += `
     <p class="totalPrice">Preço Final: ${formatter.format(totalShopping)}</p>
+    <button class="btn" id="btnLimpar">LIMPAR SELEÇÃO</button>
   `
-
 }
 
 function resetQuantitiesAndForm() {
@@ -156,10 +156,22 @@ function resetQuantitiesAndForm() {
 
   const form = document.getElementById("formPersonalData");
   form.reset()
+
+  const shoppingCart = document.getElementById("shoppingCart");
+  shoppingCart.innerHTML = "";
 }
 
-const btnCalular = document.getElementById("btnCalcular");
-btnCalular.addEventListener("click", (event) => {
+function addEventListenerLimpar() {
+  const btnLimpar = document.getElementById("btnLimpar");
+  btnLimpar.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    resetQuantitiesAndForm();
+  });
+}
+
+const btnCalcular = document.getElementById("btnCalcular");
+btnCalcular.addEventListener("click", (event) => {
   event.preventDefault();
 
   const buyedProducts = getProductsAndQuantities();
@@ -168,5 +180,7 @@ btnCalular.addEventListener("click", (event) => {
     createTable();
     insertProductsOnTable(buyedProducts);
   }
+
+  addEventListenerLimpar();
 
 })

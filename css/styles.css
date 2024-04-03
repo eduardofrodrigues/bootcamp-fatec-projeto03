@@ -164,7 +164,7 @@ td {
     font-size: 1.2rem;
     font-weight: 600;
     margin: .5rem auto 1rem auto;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 620px) {
