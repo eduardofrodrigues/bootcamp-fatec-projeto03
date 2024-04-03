@@ -33,7 +33,7 @@ body {
     margin: .625rem 0;
 }
 
-.dishesContainer {
+.sectionContainer {
     width: 100%;
     background-color: #F5F5F5;
     border-radius: .625rem;
@@ -46,19 +46,25 @@ body {
     justify-content: space-around;
 }
 
-.disheType {
+.sectionTitle {
     text-align: center;
     font-size: 1.7rem;
     font-weight: 600;
     margin: 1rem auto .5rem auto;
 }
 
-.subtitle,
-.disheName {
+.sectionSubtitle {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
     margin: .5rem auto 1rem auto;
+}
+
+.disheName {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: .2rem auto;
 }
 
 .option {
@@ -84,4 +90,48 @@ body {
 .productImage {
     width: 100%;
     height: 100%;
+}
+
+.price {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: .2rem auto;
+    color: #105719;
+}
+
+.formContainer {
+    width: 100%;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formPersonalData {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    border: none;
+    background-color: white;
+    height: 2.5rem;
+    border-radius: .5rem;
+    margin: .5rem 0;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+.btn {
+    width: 100%;
+    height: 4rem;
+    background-color: #0069D9;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
 }
