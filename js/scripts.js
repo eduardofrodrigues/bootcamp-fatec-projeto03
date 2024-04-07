@@ -144,7 +144,7 @@ function insertProductsOnTable(buyedProducts) {
   const shoppingCart = document.getElementById("shoppingCart");
   shoppingCart.innerHTML += `
     <p class="totalPrice">Preço Final: ${formatter.format(totalShopping)}</p>
-    <button class="btn" id="btnLimpar">LIMPAR SELEÇÃO</button>
+    <button class="btnLimpar" id="btnLimpar">LIMPAR SELEÇÃO</button>
   `
 }
 
